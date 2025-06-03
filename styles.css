@@ -1,0 +1,43 @@
+h1 {
+    background: -webkit-linear-gradient(#095855, #13b4bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* h3 {
+    text-align: center;
+} */
+
+#add {
+    color: #095855
+}
+
+#todo {
+    color: #095855bb
+}
+
+#completed {
+    color: #0958557c
+}
+
+button {
+    background-color: rgb(206, 117, 132);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 3px 10px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: rgba(206, 117, 132, 0.535);
+}
+
+button:active {
+    transform: translateY(3px);
+}
+
+#newTask {
+    border-color: rgb(231, 182, 190);
+}
