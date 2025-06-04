@@ -4,7 +4,7 @@ let addButton = document.getElementById("add-button");
 
 let toDo = document.getElementById("todo");
 
-function addTask() {
+function Task() {
     let listItem = document.createElement("li");
 
     if (newTask.value === "") {
@@ -17,14 +17,25 @@ function addTask() {
     listItem.appendChild(checkbox);
 
     let label = document.createElement("label");
-    label.htmlFor = "check";
+    label.contentEditable = true;
     listItem.appendChild(label);
 
-    toDo.appendChild(listItem);
+    checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+            completed.appendChild(listItem); 
+            listItem.classList.toggle("completed");
+            listItem.classList.remove("notCompleted");
+        } else {
+            toDo.appendChild(listItem);
+            listItem.classList.remove("completed");
+            listItem.classList.toggle("notCompleted");
+        }
+    });
 
+    toDo.appendChild(listItem);
     label.innerHTML = newTask.value;
 
     newTask.value = "";
 }
 
-addButton.addEventListener("click", addTask);
+addButton.addEventListener("click", Task);

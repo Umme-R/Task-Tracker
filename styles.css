@@ -2,22 +2,25 @@ h1 {
     background: -webkit-linear-gradient(#095855, #13b4bf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 48px;
+    text-align: center;
 }
 
-/* h3 {
-    text-align: center;
-} */
+h3 {
+    font-size: 24px;
+    padding-left: 15px;
+}
 
 #add {
-    color: #095855
+    color: #095855;
 }
 
 #todo {
-    color: #095855bb
+    color: #095855bb;
 }
 
 #completed {
-    color: #0958557c
+    color: #0958557c;
 }
 
 button {
@@ -40,4 +43,16 @@ button:active {
 
 #newTask {
     border-color: rgb(231, 182, 190);
+    margin-left: 15px;
+}
+
+.completed {
+    text-decoration-line: line-through;
+    font-size: 18px;
+    color: rgb(164, 222, 164);
+}
+
+.notCompleted {
+    font-size: 18px;
+    color:rgb(181, 101, 92);
 }
